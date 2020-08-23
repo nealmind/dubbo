@@ -50,6 +50,7 @@ import static org.apache.dubbo.config.spring.beans.factory.annotation.ServiceBea
 import static org.springframework.util.StringUtils.hasText;
 
 /**
+ * 注册@Reference注解
  * {@link org.springframework.beans.factory.config.BeanPostProcessor} implementation
  * that Consumer service {@link Reference} annotated fields
  *

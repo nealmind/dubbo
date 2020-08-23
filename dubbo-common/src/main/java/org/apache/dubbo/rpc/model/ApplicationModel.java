@@ -77,6 +77,11 @@ public class ApplicationModel {
 
     private static final ExtensionLoader<FrameworkExt> LOADER = ExtensionLoader.getExtensionLoader(FrameworkExt.class);
 
+    /**
+     * 获取spi配置，在org.apache.dubbo.common.context.FrameworkExt 中
+     * @see ConfigManager,Environment,ServiceRepository
+     * 调用启initialize方法
+     */
     public static void initFrameworkExts() {
         Set<FrameworkExt> exts = ExtensionLoader.getExtensionLoader(FrameworkExt.class).getSupportedExtensionInstances();
         for (FrameworkExt ext : exts) {

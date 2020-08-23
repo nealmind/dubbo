@@ -398,7 +398,7 @@ public class ReferenceConfig<T> extends ReferenceConfigBase<T> {
             checkInterfaceAndMethods(interfaceClass, getMethods());
         }
 
-        //init serivceMetadata
+        //init serviceMetadata
         serviceMetadata.setVersion(version);
         serviceMetadata.setGroup(group);
         serviceMetadata.setDefaultGroup(group);

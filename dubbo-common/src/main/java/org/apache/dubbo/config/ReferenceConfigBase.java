@@ -44,11 +44,13 @@ public abstract class ReferenceConfigBase<T> extends AbstractReferenceConfig {
 
     /**
      * The interface name of the reference service
+     * 服务接口名
      */
     protected String interfaceName;
 
     /**
      * The interface class of the reference service
+     * 服务接口class对象
      */
     protected Class<?> interfaceClass;
 
@@ -72,6 +74,9 @@ public abstract class ReferenceConfigBase<T> extends AbstractReferenceConfig {
      */
     protected String protocol;
 
+    /**
+     * 服务元数据实例
+     */
     protected ServiceMetadata serviceMetadata;
 
     public ReferenceConfigBase() {

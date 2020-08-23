@@ -31,17 +31,22 @@ import java.util.stream.IntStream;
 
 /**
  * Code generator for Adaptive class
+ * 适配器生成代码
  */
 public class AdaptiveClassCodeGenerator {
 
     private static final Logger logger = LoggerFactory.getLogger(AdaptiveClassCodeGenerator.class);
 
+    //Invocation
     private static final String CLASSNAME_INVOCATION = "org.apache.dubbo.rpc.Invocation";
 
+    //包名
     private static final String CODE_PACKAGE = "package %s;\n";
 
+    //引用
     private static final String CODE_IMPORTS = "import %s;\n";
 
+    //生成的类名，
     private static final String CODE_CLASS_DECLARATION = "public class %s$Adaptive implements %s {\n";
 
     private static final String CODE_METHOD_DECLARATION = "public %s %s(%s) %s {\n%s}\n";
@@ -84,6 +89,7 @@ public class AdaptiveClassCodeGenerator {
     }
 
     /**
+     * 
      * generate and return class code
      */
     public String generate() {

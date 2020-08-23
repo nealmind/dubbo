@@ -55,6 +55,10 @@ public class DubboBootstrapApplicationListener extends OneTimeExecutionApplicati
         }
     }
 
+    /**
+     * 发布事件 启动类
+     * @param event
+     */
     private void onContextRefreshedEvent(ContextRefreshedEvent event) {
         dubboBootstrap.start();
     }

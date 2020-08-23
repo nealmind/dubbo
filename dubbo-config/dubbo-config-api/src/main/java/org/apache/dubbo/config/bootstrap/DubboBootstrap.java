@@ -497,25 +497,25 @@ public class DubboBootstrap extends GenericEventListener {
     }
 
     /**
-     * Initialize
+     * Initialize 初始化
      */
     private void initialize() {
         if (!initialized.compareAndSet(false, true)) {
             return;
         }
-
+        //框架扩展？
         ApplicationModel.initFrameworkExts();
-
+        //开启配置中心
         startConfigCenter();
-
+        //如有必要，使用注册中心作为配置中心
         useRegistryAsConfigCenterIfNecessary();
-
+        //加载远程配置
         loadRemoteConfigs();
-
+        //全球配置
         checkGlobalConfigs();
-
+        //初始化元服务
         initMetadataService();
-
+        //初始化监听器
         initEventListener();
 
         if (logger.isInfoEnabled()) {
@@ -581,6 +581,9 @@ public class DubboBootstrap extends GenericEventListener {
         ConfigValidationUtils.validateSslConfig(getSsl());
     }
 
+    /**
+     * 配置中心初始化
+     */
     private void startConfigCenter() {
         Collection<ConfigCenterConfig> configCenters = configManager.getConfigCenters();
 
